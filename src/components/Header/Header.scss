@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 8px;
+
+    &__input {
+        background-image: url('../../assets/icons/search.svg');
+        background-repeat: no-repeat;
+    }
+
+    &__button {
+
+    }
+}
