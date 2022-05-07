@@ -1,14 +1,57 @@
+@use '../../styles/partials/variables' as *;
+
 .header {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 8px;
+    flex-flow: row wrap;
+    
+    padding: 16px;
+
+    &__logo {
+        min-width: 50%;
+        max-width: 120px;
+        max-height: 25px;
+        flex: 1 100%;
+        margin: 0 auto;
+    }
 
     &__input {
-        background-image: url('../../assets/icons/search.svg');
-        background-repeat: no-repeat;
+        background: url('../../assets/icons/search.svg') no-repeat 2%;
+        padding: 1% 10%;
+        border-radius: 5px;
+        max-height: 1%;
+        min-height: 36px;
+        margin: 4% 0;
+        justify-content: space-between;
+        border: 1px solid $mercury-clr;
+        border-radius: $form-radius;
+        flex: 2;
+        order: 1;
+    }
+
+    &__image {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-position: center;
+        display: flex;
+        align-self: center;
+        flex: 1;
+        order: 2;
     }
 
     &__button {
-
+        background: url('../../assets/icons/upload.svg') no-repeat 2%;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: none;
+        min-height: 40px;
+        max-height: 40px;
+        //padding: $button-padding;  
+        color: $white-text-clr;
+        background-color: $blue-clr;
+        border-radius: 5px;
+        min-width: 96%;
+        flex: 1 100%;
+        order: 3;
     }
 }
