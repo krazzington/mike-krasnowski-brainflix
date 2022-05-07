@@ -1,0 +1,29 @@
+//media query
+$midmobileBp: 412px;
+$tabletBp: 768px;
+$midtabletBp: 871px;
+$desktopBp: 1280px;
+
+@mixin tablet {
+    @media only screen and (min-width: $tabletBp) {
+        @content;
+    }
+}
+
+@mixin mid-tablet {
+    @media only screen and (min-width: $midtabletBp) {
+        @content;
+    }
+}
+
+@mixin mid-mobile {
+    @media only screen and (min-width: $midmobileBp) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $desktopBp) {
+        @content;
+    }
+}

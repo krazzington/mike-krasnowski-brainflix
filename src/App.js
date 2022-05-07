@@ -1,15 +1,29 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import Description from './components/Description/Description';
+import Header from './components/Header/Header.jsx';
+import Hero from './components/Hero/Hero.jsx';
+import Description from './components/Description/Description.jsx';
+import data from './data/video-details.json';
+import React from 'react';
 
-function App() {
-  return (<>
-    <Header />
-    <Hero />
-    <Description />
-    </>
-  );
+class App extends React.Component {
+
+  constructor(){
+    super();
+    this.state = {
+      videoDetails: data[0],
+    }
+  }
+ 
+  render(){
+    console.log(data);
+    return (
+      <>
+      <Header />
+      <Hero data={this.state.videoDetails}/>
+      <Description data={this.state.videoDetails}/>
+      </>
+    );
+  }
 }
 
 export default App;

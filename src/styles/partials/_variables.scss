@@ -25,3 +25,17 @@ $off-white-clr: #FAFAFA;
 $form-radius: 4px;
 
 $button-padding: 32px;
+
+$mobile-margin: 16px;
+
+@mixin header-heights {
+    min-height: 36px;
+    max-height: 36px;
+}
+
+@mixin header-heights-tablet {
+    min-height: 40px;
+    max-height: 40px;
+}
+
+$header-tablet-margin-right: 2%;

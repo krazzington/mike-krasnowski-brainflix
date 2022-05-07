@@ -8,7 +8,7 @@ function Header() {
         <header className="header">
             <img className="header__logo" src={BrainFlixLogo} alt="BrainFlix-logo"/>
             <input className="header__input" type="text" placeholder="Search" />
-            <button className="header__button">Upload</button>
+            <button className="header__button">upload</button>
             <img className="header__image" src={Mohan} alt="Mohan" />
         </header>
     )
