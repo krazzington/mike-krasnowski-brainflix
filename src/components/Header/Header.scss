@@ -71,15 +71,11 @@
 
     &__image {
         @include header-heights;
-        min-width: 36px;
-        max-width: 36px;
-        border-radius: 50%;
-        background-position: center;
+        @include mohan-image;
         display: flex;
         align-self: center;
         flex: 1;
         order: 2;
-        
 
         @include tablet {
             @include header-heights-tablet;
@@ -90,13 +86,9 @@
 
     &__button {
         @include header-heights;
+        @include buttons;
         background: url('../../assets/icons/upload.svg') no-repeat 4%;
-        font-weight: 600;
-        text-transform: uppercase;
-        border: none;
-        color: $white-text-clr;
         background-color: $blue-clr;
-        border-radius: 5px;
         min-width: 96%;
         flex: 1 100%;
         order: 3;

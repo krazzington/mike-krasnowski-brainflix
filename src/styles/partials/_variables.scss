@@ -39,3 +39,19 @@ $mobile-margin: 16px;
 }
 
 $header-tablet-margin-right: 2%;
+
+@mixin mohan-image {
+    min-width: 36px;
+    max-width: 36px;
+    border-radius: 50%;
+    background-position: center;
+}
+
+@mixin buttons {
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    color: $white-text-clr;
+    background-color: $blue-clr;
+    border-radius: 5px;
+}

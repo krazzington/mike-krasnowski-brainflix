@@ -1,2 +1,41 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mediaQueries' as *;
+
+.commentBoxDiv {
+    margin: $mobile-margin;
+    display: flex;
+    flex-direction: column;
+
+    &__numberOfComments{
+
+    }
+
+    &__header {
+        text-transform: uppercase;
+        color: $silver-clr;
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    &__commentSectionForm {
+
+    }
+
+    &__commentSectionForm{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.commentSectionImage{
+    
+    &__image{
+        @include mohan-image;
+        width: 20%
+    
+    }
+}
+
+.commentSectionButton {
+    @include buttons;
+}

@@ -2,5 +2,84 @@
 @use '../../styles/partials/mediaQueries' as *;
 
 .description {
-    border: 2px blue solid;
+    margin: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    color: $black-clr;
+
+    &__nameDate {
+        padding: 16px 0;
+    }
+
+    &__viewsLikes {
+        border: none;
+    }
+}
+
+.h2Header {
+    font-size: 24px;
+    padding: 16px 0 ;
+    border-bottom: 2px solid $mercury-clr;
+    margin: 0;
+    justify-content: start;
+
+    @include tablet {
+        border-bottom: none;
+        font-size: 33px;
+    }
+}
+
+.detailsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 16px 0;
+
+    @include tablet {
+        justify-content: space-between;
+    }
+}
+
+.nameDate {
+    flex: 1 10%;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__name {
+        margin: 0;
+    }
+
+    &__date {
+        margin: 0;
+    }
+}
+
+.viewsLikes {
+    flex: 1 10%;
+
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+    
+    &__views {
+        margin: 0;
+    }
+
+    &__likes {
+        margin: 0;
+    }
+}
+
+.descriptionDiv {
+    border-top: 2px solid $mercury-clr;
+
+    &__descriptionText {
+        margin: 0;
+    }
 }
