@@ -6,10 +6,14 @@ import React from 'react';
 function CommentBox() {
     return (
         <div className="commentBoxDiv">    
-            <p className="commentBoxDiv__numberOfComments">{} Comments</p>
-            <h3 className="commentBoxDiv__header">join the conversation</h3>
-            <div className="commentSectionImage">
-                <img className="commentSectionImage__image" src={Mohan} alt="add icon on button" />
+            <div className="commentBoxDiv__numberOfComments">
+                <p className="commentBoxDiv__numberOfComments--number">{} Comments</p>
+            </div>
+            <div className="commentBoxDiv__header">
+                <h3 className="commentBoxDiv__header--text">join the conversation</h3>
+            </div>
+            <div className="commentBoxDiv__commentSectionImageDiv">
+                <img className="commentSectionImageDiv__image" src={Mohan} alt="add icon on button" />
             </div>
             <CommentForm />
         </div>
