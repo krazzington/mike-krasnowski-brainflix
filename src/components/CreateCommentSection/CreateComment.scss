@@ -1,6 +1,9 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mediaQueries' as *;
 
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mediaQueries' as *;
+
 .commentBoxDiv {
     margin: $mobile-margin;
     display: flex;
@@ -8,31 +11,41 @@
 
     &__numberOfComments{
 
+        &--number {
+        border: none;
+        }
     }
 
     &__header {
-        text-transform: uppercase;
-        color: $silver-clr;
-        font-weight: 700;
-        font-size: 12px;
-    }
 
-    &__commentSectionForm {
-
+        &--text{
+        @include section-header;
+        }
     }
 
     &__commentSectionForm{
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        margin: 16px;
+        
+
+    }
+
+    &__commentSectionImageDiv {
+        display: flex;
+        flex-direction: column;
+        width: 100px;
     }
 }
 
-.commentSectionImage{
+.commentSectionImageDiv {
+    
     
     &__image{
         @include mohan-image;
-        width: 20%
-    
+        width: 20%;
+        height: 100%;
     }
 }
 

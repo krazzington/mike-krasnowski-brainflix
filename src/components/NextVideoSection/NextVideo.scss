@@ -1,2 +1,35 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mediaQueries' as *;
+
+.nextVidSectionHeader{
+    @include section-header;
+    
+}
+
+.nextVidSection {
+    margin: $mobile-margin;
+}
+
+.nextVidSectionDiv {
+    display: flex;
+    flex-direction: row;
+    
+    
+    &__videoImage{
+        width: 100px;
+        height: 60px;
+        border-radius: 4px;
+        background-color: $mercury-clr;
+    }
+        
+    &__titleChannelDiv {
+        
+        &--videoTitle {
+            @include subheader;
+        }
+
+        &--videoChannel{
+            @include body-copy;
+        }
+    }
+}
