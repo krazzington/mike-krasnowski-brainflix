@@ -5,13 +5,15 @@ import React from 'react';
 
 function CommentBox() {
     return (
-        <div className="commentBoxDiv">    
+        <div className="commentBoxDiv">
             <p className="commentBoxDiv__numberOfComments">{} Comments</p>
-            <h3 className="commentBoxDiv__header">join the conversation</h3>
-            <div className="commentSectionImage">
-                <img className="commentSectionImage__image" src={Mohan} alt="add icon on button" />
+            <div className="commentBoxDiv__commentSectionImageDiv">
+                    <img className="commentBoxDiv__commentSectionImageDiv--image" src={Mohan} alt="add icon on button" />
             </div>
-            <CommentForm />
+            <div className="commentBoxDiv__commentForm">    
+                <p className="commentBoxDiv__commentForm--header">join the conversation</p>    
+                <CommentForm  />
+            </div>
         </div>
     )
 }
@@ -21,9 +23,9 @@ export default CommentBox
 class CommentForm extends React.Component {
     render() {
         return (
-            <form className="commentBoxDiv__commentSectionForm">
-                <input className="commentSectionInput" type="text" placeholder="Add a new comment" />
-                <button className="commentSectionButton"><img src={add} alt="add icon on button" />Comment</button> 
+            <form className="commentForm__commentSectionForm">
+                <input className="commentForm__commentSectionForm--commentSectionInput" type="text" placeholder="Add a new comment" />
+                <button className="commentForm__commentSectionForm--commentSectionButton"><img src={add} alt="add icon on button" />Comment</button> 
             </form>
         )
     }
