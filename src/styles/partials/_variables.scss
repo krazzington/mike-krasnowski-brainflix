@@ -74,3 +74,10 @@ font-weight: 400;
     font-size: 13px;
     font-weight: 700;
 }
+
+@mixin icon-background {
+    background-color: $dark-black-clr;
+    opacity: 50%;
+    border-radius: 4px;
+    bottom: 0;
+}

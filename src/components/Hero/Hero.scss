@@ -1,2 +1,69 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mediaQueries' as *;
+
+.controlsDiv {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    &__playDiv{
+        position: absolute;
+        flex: 1;
+        
+        &--play{
+            @include icon-background;
+        }
+    }
+    
+    &__scrollDiv{
+        // position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex: 4;
+
+        &--scroll {
+            border: 2px solid $dark-black-clr;
+            width: 700%;
+            background-color: $dark-black-clr;
+        }
+        &--time {
+            color: white;
+            font-size: 50%;
+            margin: 0;
+            align-self: center;
+        }
+    }
+
+    &__fscreenVol {
+        @include icon-background;
+        display: flex;
+        flex-direction: row;
+        flex: 2;
+
+        &--fullscreen{
+            padding: 0 1%;
+        }
+        &--volume{
+            
+            padding: 0 1%;
+        }
+    }
+}
+
+// .video {
+    
+//     width: 100%;
+//     padding-top: 56.25%;
+//     height: 0%;
+//     position: relative;
+//     margin-bottom: 1.5rem;
+//     background-color: #000000;
+   
+//     &__player {
+//         width: 100%;
+//         height: 100%;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//     }
+// }

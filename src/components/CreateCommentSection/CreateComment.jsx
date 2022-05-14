@@ -15,7 +15,6 @@ function CommentBox() {
             <div className="commentBoxDiv__commentSectionImageDiv">
                 <img className="commentSectionImageDiv__image" src={Mohan} alt="add icon on button" />
             </div>
-            <CommentForm />
         </div>
     )
 }
@@ -25,9 +24,9 @@ export default CommentBox
 class CommentForm extends React.Component {
     render() {
         return (
-            <form className="commentBoxDiv__commentSectionForm">
-                <input className="commentSectionInput" type="text" placeholder="Add a new comment" />
-                <button className="commentSectionButton"><img src={add} alt="add icon on button" />Comment</button> 
+            <form className="commentForm__commentSectionForm">
+                <input className="commentForm__commentSectionForm--commentSectionInput" type="text" placeholder="Add a new comment" />
+                <button className="commentForm__commentSectionForm--commentSectionButton"><img src={add} alt="add icon on button" />Comment</button> 
             </form>
         )
     }

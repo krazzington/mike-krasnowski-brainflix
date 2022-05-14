@@ -7,48 +7,53 @@
 .commentBoxDiv {
     margin: $mobile-margin;
     display: flex;
-    flex-direction: column;
+    position: relative;
+    
 
     &__numberOfComments{
-
-        &--number {
         border: none;
-        }
-    }
-
-    &__header {
-
-        &--text{
-        @include section-header;
-        }
+        position: absolute;
     }
 
     &__commentSectionForm{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        margin: 16px;
-        
-
+          
     }
 
     &__commentSectionImageDiv {
         display: flex;
         flex-direction: column;
         width: 100px;
+        
+
+        &--image{
+            @include mohan-image;
+            width: 100%;
+        }
     }
+
+    &__commentForm {
+        margin-top: 10%; 
+
+        &--header {
+            @include section-header;
+            
+        }
+    }
+    
 }
 
-.commentSectionImageDiv {
+.commentForm {
     
-    
-    &__image{
-        @include mohan-image;
-        width: 20%;
-        height: 100%;
-    }
-}
+    &__commentSectionForm {
+        flex-direction: column;
 
-.commentSectionButton {
-    @include buttons;
+        &--commentSectionInput{
+            width: 100%;
+        }
+        &--commentSectionButton{
+            width: 100%;
+            @include buttons;
+        }
+    }
+
 }
