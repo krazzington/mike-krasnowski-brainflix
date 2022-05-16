@@ -1,35 +1,44 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mediaQueries' as *;
 
-.nextVidSectionHeader{
-    @include section-header;
-    
-}
+
 
 .nextVidSection {
     margin: $mobile-margin;
+    
+    &__nextVidSectionHeader{
+        @include section-header;
+        color: $silver-clr;
+        text-transform: uppercase;
+    }
 }
 
 .nextVidSectionDiv {
     display: flex;
     flex-direction: row;
     
-    
     &__videoImage{
         width: 100px;
+        max-width: 100px;
         height: 60px;
         border-radius: 4px;
         background-color: $mercury-clr;
+        flex: 1 5%;
+        
     }
         
     &__titleChannelDiv {
-        
+        flex: 2;
+        margin-left: 5%;
+
         &--videoTitle {
             @include subheader;
+            margin: 0;
         }
 
         &--videoChannel{
             @include body-copy;
+            margin-top: 5%;
         }
     }
 }

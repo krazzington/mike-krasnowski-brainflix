@@ -4,24 +4,37 @@
 .postedCommentSection {
     border-bottom: $border;
     margin: 16px;
-
-    &__image {
-        @include mohan-image;
+    display: flex;
+    
+    &__imageDiv{
         width: 20%;
-        height: 100%;
-        background-color: aqua;
-        
+
+        &--image {
+        @include mohan-image;
+        background-color: $mercury-clr;
+        }
     }
 
     &__nameDateDiv {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    
+
+        &--name{
+            margin: 0;
+            font-weight: 700;
+        }
+        &--date{
+            margin: 0;
+            color: $silver-clr;
+        }
     }
     
     &__textDiv {
-        margin: 16px 0;
-        @include body-copy;
+        padding-left: 16px;
+    
+        &--textDiv{
+            @include body-copy;
+        }
     }
 }

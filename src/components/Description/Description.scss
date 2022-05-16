@@ -18,22 +18,22 @@
 }
 
 .h2Header {
-    font-size: 24px;
+    @include fontStyle(24px, 32px, 700);
     border-bottom: 2px solid $mercury-clr;
     margin: 0;
+    padding-bottom: 16px;
     justify-content: start;
 
     @include tablet {
-        border-bottom: none;
-        font-size: 33px;
+        @include fontStyle(33px, 44px, 700);
     }
 }
 
 .detailsDiv {
     display: flex;
     flex-direction: row;
-    justify-content: start;
     margin: 16px 0;
+    min-height: 10vh;
 
     @include tablet {
         justify-content: space-between;
@@ -42,6 +42,7 @@
 
 .nameDate {
     flex: 1 10%;
+    
 
     @include tablet {
         display: flex;
@@ -49,16 +50,18 @@
     }
 
     &__name {
-        margin: 0;
+        @include detailsDivMobile;
     }
 
     &__date {
         margin: 0;
+        
     }
 }
 
 .viewsLikes {
     flex: 1 10%;
+    color: $silver-clr;
 
     @include tablet {
         display: flex;
@@ -67,11 +70,11 @@
     }
     
     &__views {
-        margin: 0;
+        @include detailsDivMobile;
     }
 
     &__likes {
-        margin: 0;
+        margin:0;
     }
 }
 
