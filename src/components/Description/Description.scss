@@ -11,6 +11,11 @@
     @include tablet {
         margin: 0 32px;
     }
+   
+    @include desktop {
+        margin-left: $desktop-margin;
+        max-width: 60%;
+    }
     
     &__h2Header {
         @include fontStyle(24px, 32px, 700);

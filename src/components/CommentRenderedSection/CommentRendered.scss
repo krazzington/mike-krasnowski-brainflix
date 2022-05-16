@@ -10,6 +10,11 @@
         margin: 32px;
     }
 
+    @include desktop {
+        margin-left: $desktop-margin;
+        max-width: 60%;
+    }
+
     &__imageDiv{
         width: 20%;
 
