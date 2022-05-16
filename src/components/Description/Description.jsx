@@ -10,7 +10,8 @@ function Description(props) {
     const videoData = videoDetails.find(video => video.id === videoVariable);
     return (
         <>
-            <section className="description">
+            <section className="description desktop desktop__left">
+                <div className="desktop__left">
                 <h2 className="description__h2Header">{videoData.title}</h2>
                 <div className="description__detailsDiv">
                     <div className="detailsDiv__nameDate">
@@ -24,6 +25,7 @@ function Description(props) {
                 </div>
                 <div className="descriptionDiv">
                     <p className="descriptionDiv__descriptionText">{videoData.description}</p>
+                </div>
                 </div>
             </section>
         </>

@@ -2,7 +2,7 @@
 @use '../../styles/partials/mediaQueries' as *;
 
 .description {
-    margin: 16px;
+    margin: 0 $mobile-margin;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -13,39 +13,55 @@
     }
    
     @include desktop {
-        margin-left: $desktop-margin;
-        max-width: 60%;
+        @include desktopReset;
     }
     
     &__h2Header {
         @include fontStyle(24px, 32px, 700);
         border-bottom: 2px solid $mercury-clr;
         margin: 0;
-        padding-bottom: 16px;
+        padding: $padding-header-mobile;
         justify-content: start;
     
         @include tablet {
             @include fontStyle(33px, 44px, 700);
             border-bottom: 0;
+            padding: $padding-header-tablet;
+        }
+
+        @include desktop {
+            margin-right: $desktop-padding-right;
         }
     }
 
     &__detailsDiv {
         display: flex;
         flex-direction: row;
+        margin: $mobile-margin 0;
+
+        @include tablet {
+            margin-top: 0;
+        }
+
+        @include desktop {
+            margin-right: $desktop-padding-right;
+        }
     }
 }
 
 .detailsDiv {
-    margin: 16px 0;
+    // margin: 16px 0;
     min-height: 10vh;
 
     @include tablet {
         justify-content: space-between;
     }
+    
+    @include desktop {
+        margin-right: $desktop-padding-right;
+    }
 
     &__nameDate {
-        padding: 16px 0;
         flex: 1 10%;
 
 
@@ -60,19 +76,19 @@
 
             @include tablet {
                 margin-right: 7%;
+                @include detailsDivTablet;
             }
         }
 
         &--date {
             margin: 0;
-            
+            color: $silver-clr;
         }
     }
 
     &__viewsLikes {
         flex: 1 10%;
         color: $silver-clr;
-        padding: 16px 0;
 
         @include tablet {
             display: flex;
@@ -82,6 +98,10 @@
         
         &--views {
             @include detailsDivMobile;
+
+            @include tablet {
+                @include detailsDivTablet;
+            }
         }
 
         &--likes {
@@ -98,6 +118,32 @@
     border-top: $border;
 
     &__descriptionText {
-        margin: 0;
+        margin: $padding-header-mobile;
+
+        @include desktop {
+            margin-right: $desktop-padding-right;
+        }
     }
+}
+
+.desktop {
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+    &__right {
+        @include desktop {
+            //max-width: 30%;
+            flex: 1 20%;
+        }
+    }
+
+    &__left {
+        @include desktop {
+            //max-width: 60%;
+            flex: 2 20%;
+        }
+    }
+
 }

@@ -9,7 +9,8 @@ function CommentBox(props) {
     const videoVariable = props.data;
     const videoData = videoDetails.find(video => video.id === videoVariable);
     return (
-        <div className="commentBoxDiv">
+        <div className="commentBoxDiv desktop desktop__left">
+            <div className="desktop__left">
             <div className="commentBoxDiv__numberOfComments">
                 <p className="commentBoxDiv__commentAmount">{videoData.comments.length} Comments</p>
             </div>
@@ -21,6 +22,7 @@ function CommentBox(props) {
                     <p className="commentMainDiv__commentSectionForm--header">join the conversation</p>    
                         <CommentForm  />
                 </div>
+            </div>
             </div>
         </div>
     )

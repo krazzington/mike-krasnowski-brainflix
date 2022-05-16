@@ -7,7 +7,7 @@
     padding-top: 56.25%;
     height: 0%;
     position: relative;
-    margin-bottom: 1.5rem;
+    //margin-bottom: $mobile-margin;
     background-color: #000000;
    
     &__player {
@@ -19,51 +19,51 @@
     }
 }
 
-.controlsDiv {
-    position: relative;
-    display: flex;
-    flex-direction: row;
+// .controlsDiv {
+//     position: relative;
+//     display: flex;
+//     flex-direction: row;
 
-    &__playDiv{
-        position: absolute;
-        flex: 1;
+//     &__playDiv{
+//         position: absolute;
+//         flex: 1;
         
-        &--play{
-            @include icon-background;
-        }
-    }
+//         &--play{
+//             @include icon-background;
+//         }
+//     }
     
-    &__scrollDiv{
-        // position: absolute;
-        flex: 4;
-        @include icon-background;
+//     &__scrollDiv{
+//         // position: absolute;
+//         flex: 4;
+//         @include icon-background;
 
-        &--scroll {
-            border: 2px solid $dark-black-clr;
-            width: 600%;
-            background-color: $dark-black-clr;
-            z-index: -1;
-        }
-        &--time {
-            color: white;
-            font-size: 50%;
-            margin: 0;
-            align-self: center;
-        }
-    }
+//         &--scroll {
+//             border: 2px solid $dark-black-clr;
+//             width: 600%;
+//             background-color: $dark-black-clr;
+//             z-index: -1;
+//         }
+//         &--time {
+//             color: white;
+//             font-size: 50%;
+//             margin: 0;
+//             align-self: center;
+//         }
+//     }
 
-    &__fscreenVol {
-        @include icon-background;
-        flex: 2;
+//     &__fscreenVol {
+//         @include icon-background;
+//         flex: 2;
 
-        &--fullscreen{
-            padding: 0 1%;
-            width: 10%;
-        }
-        &--volume{
-            width: 10%;
-            padding: 0 1%;
-        }
-    }
-}
+//         &--fullscreen{
+//             padding: 0 1%;
+//             width: 10%;
+//         }
+//         &--volume{
+//             width: 10%;
+//             padding: 0 1%;
+//         }
+//     }
+// }
 

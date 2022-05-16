@@ -20,7 +20,7 @@ const NextVideo = (props) => {
     }
     )
     return(
-        <div className='nextVidSection'>
+        <div className='nextVidSection desktop desktop__right'>
             <p className='nextVidSection__nextVidSectionHeader'>Next Video</p>
             <div>
                 {newNextVideo}

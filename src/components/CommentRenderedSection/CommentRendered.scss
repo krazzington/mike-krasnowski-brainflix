@@ -11,16 +11,25 @@
     }
 
     @include desktop {
-        margin-left: $desktop-margin;
-        max-width: 60%;
+        @include desktopReset;
+        
     }
 
     &__imageDiv{
         width: 20%;
 
+        @include tablet {
+            width: auto;
+            padding-right: $tablet-margin;
+        }
+
         &--image {
         @include mohan-image;
         background-color: $mercury-clr;
+            
+            @include tablet {
+                @include mohan-image-tablet;
+            }
         }
     }
 
@@ -41,11 +50,38 @@
     
     &__textDiv {
         padding-left: 16px;
+
+        @include tablet {
+            padding-left: 0;
+
+            @include desktop {
+                margin-right: $desktop-padding-right;
+            }
+        }
     
-        &--textDiv{
-            @include fontStyle(13px, 18px, 400);
+        &--text{
+            @include fontStyle(14px, 22px, 400);
         }
     }
 }
 
+.desktop {
 
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+    &__right {
+        @include desktop {
+            max-width: 30%;
+            flex: 1 20%;
+        }
+    }
+
+    &__left {
+        @include desktop {
+            //max-width: 60%;
+            flex: 2 20%;
+        }
+    }
+}

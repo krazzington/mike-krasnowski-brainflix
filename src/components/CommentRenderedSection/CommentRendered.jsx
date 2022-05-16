@@ -10,7 +10,8 @@ const CommentRendered = (props) => {
         <>
             {videoData.comments.map((comment, index) => {
                 return(
-                    <div key={index} className="postedCommentSection">
+                    <div key={index} className="postedCommentSection desktop">
+                        <div className="desktop__left">
                         <div className="postedCommentSection__imageDiv">
                             <div className="postedCommentSection__imageDiv--image" alt="empty photo"></div>
                         </div>
@@ -20,6 +21,7 @@ const CommentRendered = (props) => {
                                 <p className="postedCommentSection__nameDateDiv--date">{dateGenerator(comment.timestamp)}</p>
                             </div>
                             <p className="postedCommentSection__textDiv--text">{comment.comment}</p>
+                        </div>
                         </div>
                     </div>
                     )

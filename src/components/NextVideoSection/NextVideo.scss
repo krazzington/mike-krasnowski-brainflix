@@ -7,12 +7,8 @@
     margin: $mobile-margin;
     
     &__nextVidSectionHeader{
-        @include section-header;
-        color: $silver-clr;
-        text-transform: uppercase;
+        @include section-header($silver-clr);
     }
-
-    
 }
 
 .nextVidSectionDiv {
@@ -51,4 +47,26 @@
             margin-top: 5%;
         }
     }
+}
+
+.desktop {
+
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+    }
+    &__right {
+        @include desktop {
+            //max-width: 30%;
+            flex: 1 20%;
+        }
+    }
+
+    &__left {
+        @include desktop {
+            //max-width: 60%;
+            flex: 2 20%;
+        }
+    }
+
 }

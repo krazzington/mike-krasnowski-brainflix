@@ -16,8 +16,8 @@
     }
 
     @include desktop {
-        margin-left: $desktop-margin;
-        max-width: 60%;
+        @include desktopReset;
+        
     }
 
     &__numberOfComments{
@@ -41,21 +41,23 @@
     &__commentMainDiv {
         display: flex;
         flex-direction: row;
+        
     }
 
 }
 
 .commentMainDiv{
     width: 100%;
+    padding-left: $mobile-margin;
     
     &__commentSectionImageDiv {
-        width: 20%;
-        margin-top: 14%;
+        @include section-header($silver-clr);
+        margin-top: 40px;
         
         @include tablet {
             width: auto;
-            margin-top: 4%;
-            padding-right: 16px;
+            margin-top: 40px;
+            padding-right: $tablet-margin;
         }
     }
     
@@ -68,16 +70,20 @@
     }
 
     &__commentSectionForm{
-        flex: 1 20%;
+        width: 100%;
+        box-sizing: border-box;
         
         @include tablet {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between
         }
+        @include desktop {
+            padding-right: $desktop-padding-right;
+        }
 
         &--header {
-            @include section-header;    
+            @include section-header($silver-clr);    
 
             @include tablet {
                 width: 100%;
@@ -107,4 +113,26 @@
             }    
         }
     }
+}
+
+.desktop {
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+    &__right {
+        @include desktop {
+            //max-width: 30%;
+            flex: 1 20%;
+        }
+    }
+
+    &__left {
+        @include desktop {
+            //max-width: 60%;
+            flex: 2 20%;
+        }
+    }
+
 }
