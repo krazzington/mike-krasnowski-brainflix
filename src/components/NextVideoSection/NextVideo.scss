@@ -16,6 +16,10 @@
 .nextVidSectionDiv {
     display: flex;
     flex-direction: row;
+
+    @include tablet {
+        max-width: 40%;
+    }
     
     &__videoImage{
         width: 100px;

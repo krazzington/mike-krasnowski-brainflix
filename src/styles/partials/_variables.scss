@@ -51,6 +51,15 @@ $header-tablet-margin-right: 2%;
     background-position: center;
 }
 
+@mixin mohan-image-tablet {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    background-position: center;
+}
+
 @mixin buttons {
     font-weight: 700;
     text-transform: uppercase;
