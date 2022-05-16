@@ -8,16 +8,20 @@
     border-bottom: $border;
     padding-bottom: 16px;
     position: relative;
-    height: 35vh;
+    height: 25vh;
 
-    &__numberOfComments{
-        border: none;
-
-        
+    @include tablet {
+        margin: 16px 32px 0;
+        height: auto;
     }
+    &__numberOfComments{
+        font-weight: 700;    
+    }
+    
     &__commentAmount{
         margin: 0;
     }
+
     &__commentPart {
         position: absolute;
         right: 0;
@@ -40,21 +44,39 @@
     
     &__commentSectionImageDiv {
         width: 20%;
-        margin-top: 14% 
+        margin-top: 14%;
+        
+        @include tablet {
+            width: auto;
+            margin-top: 4%;
+            padding-right: 16px;
+        }
     }
     
     &__image{
         @include mohan-image;
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
+
+        @include tablet {
+            @include mohan-image-tablet;
+        }
     }
 
     &__commentSectionForm{
         flex: 1 20%;
         
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between
+        }
+
         &--header {
             @include section-header;    
+
+            @include tablet {
+                width: 100%;
+            }
+    
         }
 
         &--commentSectionInput{
@@ -62,12 +84,21 @@
             min-height: 100px;
             
             @include tablet {
-                
+                width: 65%;
+                min-height: 40px;
+                max-height: 40px;    
             }
         }
+
         &--commentSectionButton{
             min-width: 100%;
             @include buttons;
+
+            @include tablet {
+                min-width: 30%;
+                min-height: 40px;
+                max-height: 40px;
+            }    
         }
     }
 }

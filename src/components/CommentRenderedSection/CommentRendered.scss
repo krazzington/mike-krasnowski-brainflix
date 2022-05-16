@@ -6,6 +6,10 @@
     margin: 16px;
     display: flex;
     
+    @include tablet {
+        margin: 32px;
+    }
+
     &__imageDiv{
         width: 20%;
 
