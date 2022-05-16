@@ -11,6 +11,8 @@
         color: $silver-clr;
         text-transform: uppercase;
     }
+
+    
 }
 
 .nextVidSectionDiv {
@@ -19,6 +21,10 @@
 
     @include tablet {
         max-width: 40%;
+    }
+
+    @include desktop {
+        max-width: 20%;    
     }
     
     &__videoImage{

@@ -15,7 +15,11 @@
         height: auto;
     }
 
-    
+    @include desktop {
+        margin-left: $desktop-margin;
+        max-width: 60%;
+    }
+
     &__numberOfComments{
         font-weight: 700;    
     }
