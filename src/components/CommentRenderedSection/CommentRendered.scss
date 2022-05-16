@@ -43,7 +43,7 @@
         padding-left: 16px;
     
         &--textDiv{
-            @include body-copy;
+            @include fontStyle(13px, 18px, 400);
         }
     }
 }

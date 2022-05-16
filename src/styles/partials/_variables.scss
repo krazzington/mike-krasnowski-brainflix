@@ -82,8 +82,8 @@ $header-tablet-margin-right: 2%;
 }
 
 @mixin body-copy {
-font-size: 13px;
-font-weight: 400;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 @mixin subheader {
@@ -107,4 +107,8 @@ font-weight: 400;
     font-size: $fontSize;
     line-height: $lineHeight;
     font-weight: $fontWeight;
+}
+
+@mixin margins(){
+    
 }
