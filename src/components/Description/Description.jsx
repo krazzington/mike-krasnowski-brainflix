@@ -2,7 +2,7 @@ import './Description.scss';
 import { dateGenerator } from '../../Utilities/helper';
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
-
+import videoDetails from '../../data/video-details.json';
 
 function Description(props) {
 
