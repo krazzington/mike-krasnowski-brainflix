@@ -11,7 +11,8 @@ function Hero(props) {
     const videoData = videoDetails.find(video => video.id === videoVariable);
     return (
         <>
-        <main className="main video">
+        <main className="main">
+            <div className="video">
             <video className="video__player" width="100%" src={videoData.video} poster={videoData.image}>
             </video>
             <div className='controlsDiv'>
@@ -19,14 +20,14 @@ function Hero(props) {
                     <img className='controlsDiv__playDiv--play' src={play} alt='play button'/>
                 </div>
                 <div className='controlsDiv__scrollDiv'>
-                    {/*<img className='controlsDiv__scrollDiv--scrub' src={scrub} alt='scrub button'/>*/}
-                    <p className='controlsDiv__scrollDiv--scroll'></p>
+                    <div className='controlsDiv__scrollDiv--scroll'></div>
                     <p className='controlsDiv__scrollDiv--time'>0:00 / 4:01</p>
                 </div>
                 <div className='controlsDiv__fscreenVol'>
                         <img className='controlsDiv__fscreenVol--fullscreen' src={fullscreen} alt='fullscreen button'/>
                         <img className='controlsDiv__fscreenVol--volume' src={volume} alt='volume button'/>
                     </div>
+            </div>
             </div>
         </main>
         </>

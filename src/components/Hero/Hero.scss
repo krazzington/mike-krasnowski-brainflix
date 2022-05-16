@@ -1,6 +1,24 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mediaQueries' as *;
 
+.video {
+    
+    width: 100%;
+    padding-top: 56.25%;
+    height: 0%;
+    position: relative;
+    margin-bottom: 1.5rem;
+    background-color: #000000;
+   
+    &__player {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
 .controlsDiv {
     position: relative;
     display: flex;
@@ -17,14 +35,14 @@
     
     &__scrollDiv{
         // position: absolute;
-        display: flex;
-        flex-direction: row;
         flex: 4;
+        @include icon-background;
 
         &--scroll {
             border: 2px solid $dark-black-clr;
-            width: 700%;
+            width: 600%;
             background-color: $dark-black-clr;
+            z-index: -1;
         }
         &--time {
             color: white;
@@ -36,34 +54,16 @@
 
     &__fscreenVol {
         @include icon-background;
-        display: flex;
-        flex-direction: row;
         flex: 2;
 
         &--fullscreen{
             padding: 0 1%;
+            width: 10%;
         }
         &--volume{
-            
+            width: 10%;
             padding: 0 1%;
         }
     }
 }
 
-// .video {
-    
-//     width: 100%;
-//     padding-top: 56.25%;
-//     height: 0%;
-//     position: relative;
-//     margin-bottom: 1.5rem;
-//     background-color: #000000;
-   
-//     &__player {
-//         width: 100%;
-//         height: 100%;
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//     }
-// }

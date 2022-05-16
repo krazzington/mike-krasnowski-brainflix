@@ -1,59 +1,73 @@
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mediaQueries' as *;
 
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/mediaQueries' as *;
-
 .commentBoxDiv {
-    margin: $mobile-margin;
+    margin: 0 $mobile-margin;
     display: flex;
+    flex-direction: column;
+    border-bottom: $border;
+    padding-bottom: 16px;
     position: relative;
-    
+    height: 35vh;
 
     &__numberOfComments{
         border: none;
-        position: absolute;
-    }
 
-    &__commentSectionForm{
-          
-    }
-
-    &__commentSectionImageDiv {
-        display: flex;
-        flex-direction: column;
-        width: 100px;
         
-
-        &--image{
-            @include mohan-image;
-            width: 100%;
-        }
+    }
+    &__commentAmount{
+        margin: 0;
+    }
+    &__commentPart {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     &__commentForm {
         margin-top: 10%; 
-
-        &--header {
-            @include section-header;
-            
-        }
     }
-    
+
+    &__commentMainDiv {
+        display: flex;
+        flex-direction: row;
+    }
+
 }
 
-.commentForm {
+.commentMainDiv{
+    width: 100%;
     
-    &__commentSectionForm {
-        flex-direction: column;
+    &__commentSectionImageDiv {
+        width: 20%;
+        margin-top: 14% 
+    }
+    
+    &__image{
+        @include mohan-image;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    &__commentSectionForm{
+        flex: 1 20%;
+        
+        &--header {
+            @include section-header;    
+        }
 
         &--commentSectionInput{
-            width: 100%;
+            width: 96%;
+            min-height: 100px;
+            
+            @include tablet {
+                
+            }
         }
         &--commentSectionButton{
-            width: 100%;
+            min-width: 100%;
             @include buttons;
         }
     }
-
 }

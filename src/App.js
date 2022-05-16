@@ -31,7 +31,7 @@ class App extends React.Component {
       <Header />
       <Hero data={this.state.videoDetails}/>
       <Description data={this.state.videoDetails}/>
-      <CommentBox />
+      <CommentBox data={this.state.videoDetails}/>
       <CommentRendered 
         data={this.state.videoDetails}
       />
