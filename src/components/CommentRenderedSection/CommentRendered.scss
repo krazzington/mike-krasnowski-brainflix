@@ -65,23 +65,23 @@
     }
 }
 
-.desktop {
+// .desktop {
 
-    @include desktop {
-        display: flex;
-        flex-direction: row;
-    }
-    &__right {
-        @include desktop {
-            max-width: 30%;
-            flex: 1 20%;
-        }
-    }
+//     @include desktop {
+//         display: flex;
+//         flex-direction: row;
+//     }
+//     &__right {
+//         @include desktop {
+//             max-width: 30%;
+//             flex: 1 20%;
+//         }
+//     }
 
-    &__left {
-        @include desktop {
-            //max-width: 60%;
-            flex: 2 20%;
-        }
-    }
-}
+//     &__left {
+//         @include desktop {
+//             //max-width: 60%;
+//             flex: 2 20%;
+//         }
+//     }
+// }

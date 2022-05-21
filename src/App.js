@@ -7,6 +7,8 @@ import data from './data/video-details.json';
 import CommentRendered from './components/CommentRenderedSection/CommentRendered';
 import NextVideo from './components/NextVideoSection/NextVideo';
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
 
 class App extends React.Component {
 
@@ -27,19 +29,21 @@ class App extends React.Component {
   render(){
     
     return (
-      <>
-      <Header />
-      <Hero data={this.state.videoDetails}/>
-      <Description data={this.state.videoDetails}/>
-      <CommentBox data={this.state.videoDetails}/>
-      <CommentRendered 
-        data={this.state.videoDetails}
-      />
-      <NextVideo 
-        data={this.state.videoDetails}
-        videoData={this.newVideoFunction}
-      />
-      </>
+      <BrowserRouter>
+        <Route>
+          <Header />
+          <Hero data={this.state.videoDetails}/>
+          <Description data={this.state.videoDetails}/>
+          <CommentBox data={this.state.videoDetails}/>
+          <CommentRendered 
+            data={this.state.videoDetails}
+          />
+          <NextVideo 
+            data={this.state.videoDetails}
+            videoData={this.newVideoFunction}
+          />
+        </Route>
+      </BrowserRouter>
     );
   }
 }
