@@ -1,17 +1,14 @@
 import './CommentRendered.scss';
 import { dateGenerator } from '../../Utilities/helper';
-import videoDetails from '../../data/video-details.json';
 
 const CommentRendered = (props) => {
     
     const videoVariable = props.data;
-    const videoData = videoDetails.find(video => video.id === videoVariable);
     return (
         <>
-            {videoData.comments.map((comment, index) => {
+            {videoVariable.comments !== undefined ? videoVariable.comments.map((comment, index) => {
                 return(
-                    <div key={index} className="postedCommentSection desktop">
-                        <div className="desktop__left">
+                    <div key={index} className="postedCommentSection">
                         <div className="postedCommentSection__imageDiv">
                             <div className="postedCommentSection__imageDiv--image" alt="empty photo"></div>
                         </div>
@@ -22,12 +19,11 @@ const CommentRendered = (props) => {
                             </div>
                             <p className="postedCommentSection__textDiv--text">{comment.comment}</p>
                         </div>
-                        </div>
                     </div>
                     )
                 }
             )
-            }
+        : <></>}
         </>    
     )
 }

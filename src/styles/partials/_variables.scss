@@ -28,7 +28,7 @@ $button-padding: 32px;
 
 $mobile-margin: 16px;
 
-$tablet-margin: 24px;
+$tablet-margin: 32px;
 
 $desktop-margin: 64px;
 
@@ -119,12 +119,9 @@ $header-tablet-margin-right: 2%;
     font-weight: $fontWeight;
 }
 
-@mixin margins(){
-
-}
 
 @mixin desktopReset {
-    margin-left: 0;
-    max-width: 70%;
+    margin: 0;
+    max-width: 60%;
     margin-right: $desktop-padding-right;
 }

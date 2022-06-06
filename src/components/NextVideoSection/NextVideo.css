@@ -1,0 +1,63 @@
+.nextVidSection {
+  margin: 16px;
+}
+.nextVidSection__nextVidSectionHeader {
+  text-transform: uppercase;
+  color: #AFAFAF;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.nextVidSectionDiv {
+  display: flex;
+  flex-direction: row;
+}
+@media only screen and (min-width: 768px) {
+  .nextVidSectionDiv {
+    max-width: 40%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .nextVidSectionDiv {
+    max-width: 20%;
+  }
+}
+.nextVidSectionDiv__videoImage {
+  width: 100px;
+  max-width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  background-color: #E1E1E1;
+  flex: 1 5%;
+}
+.nextVidSectionDiv__titleChannelDiv {
+  flex: 2;
+  margin-left: 5%;
+}
+.nextVidSectionDiv__titleChannelDiv--videoTitle {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0;
+}
+.nextVidSectionDiv__titleChannelDiv--videoChannel {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 5%;
+}
+
+@media only screen and (min-width: 1280px) {
+  .desktop {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .desktop__right {
+    flex: 1 20%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .desktop__left {
+    flex: 2 20%;
+  }
+}/*# sourceMappingURL=NextVideo.css.map */

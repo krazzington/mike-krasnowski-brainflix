@@ -1,0 +1,133 @@
+.commentBoxDiv {
+  margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #E1E1E1;
+  padding-bottom: 16px;
+  position: relative;
+  height: 25vh;
+}
+@media only screen and (min-width: 768px) {
+  .commentBoxDiv {
+    margin: 16px 32px 0;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .commentBoxDiv {
+    margin-left: 0;
+    max-width: 70%;
+    margin-right: 24px;
+  }
+}
+.commentBoxDiv__numberOfComments {
+  font-weight: 700;
+}
+.commentBoxDiv__commentAmount {
+  margin: 0;
+}
+.commentBoxDiv__commentPart {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.commentBoxDiv__commentForm {
+  margin-top: 10%;
+}
+.commentBoxDiv__commentMainDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.commentMainDiv {
+  width: 100%;
+  padding-left: 16px;
+}
+.commentMainDiv__commentSectionImageDiv {
+  text-transform: uppercase;
+  color: #AFAFAF;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .commentMainDiv__commentSectionImageDiv {
+    width: auto;
+    margin-top: 40px;
+    padding-right: 24px;
+  }
+}
+.commentMainDiv__image {
+  min-width: 36px;
+  min-height: 36px;
+  max-width: 36px;
+  max-height: 36px;
+  border-radius: 50%;
+  background-position: center;
+}
+@media only screen and (min-width: 768px) {
+  .commentMainDiv__image {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    background-position: center;
+  }
+}
+.commentMainDiv__commentSectionForm {
+  width: 100%;
+  box-sizing: border-box;
+}
+@media only screen and (min-width: 768px) {
+  .commentMainDiv__commentSectionForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .commentMainDiv__commentSectionForm {
+    padding-right: 24px;
+  }
+}
+.commentMainDiv__commentSectionForm--header {
+  text-transform: uppercase;
+  color: #AFAFAF;
+  font-weight: 700;
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .commentMainDiv__commentSectionForm--header {
+    width: 100%;
+  }
+}
+.commentMainDiv__commentSectionForm--commentSectionInput {
+  width: 96%;
+  min-height: 100px;
+}
+@media only screen and (min-width: 768px) {
+  .commentMainDiv__commentSectionForm--commentSectionInput {
+    width: 65%;
+    min-height: 40px;
+    max-height: 40px;
+  }
+}
+.commentMainDiv__commentSectionForm--commentSectionButton {
+  min-width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  color: #FFFFFF;
+  background-color: #0095FF;
+  border-radius: 5px;
+  min-height: 40px;
+  max-height: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .commentMainDiv__commentSectionForm--commentSectionButton {
+    min-width: 30%;
+    min-height: 40px;
+    max-height: 40px;
+  }
+}/*# sourceMappingURL=CreateComment.css.map */

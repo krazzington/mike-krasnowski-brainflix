@@ -1,0 +1,76 @@
+.postedCommentSection {
+  border-bottom: 2px solid #E1E1E1;
+  margin: 16px;
+  display: flex;
+}
+@media only screen and (min-width: 768px) {
+  .postedCommentSection {
+    margin: 32px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .postedCommentSection {
+    margin-left: 0;
+    max-width: 70%;
+    margin-right: 24px;
+  }
+}
+.postedCommentSection__imageDiv {
+  width: 20%;
+}
+@media only screen and (min-width: 768px) {
+  .postedCommentSection__imageDiv {
+    width: auto;
+    padding-right: 24px;
+  }
+}
+.postedCommentSection__imageDiv--image {
+  min-width: 36px;
+  min-height: 36px;
+  max-width: 36px;
+  max-height: 36px;
+  border-radius: 50%;
+  background-position: center;
+  background-color: #E1E1E1;
+}
+@media only screen and (min-width: 768px) {
+  .postedCommentSection__imageDiv--image {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    background-position: center;
+  }
+}
+.postedCommentSection__nameDateDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.postedCommentSection__nameDateDiv--name {
+  margin: 0;
+  font-weight: 700;
+}
+.postedCommentSection__nameDateDiv--date {
+  margin: 0;
+  color: #AFAFAF;
+}
+.postedCommentSection__textDiv {
+  padding-left: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .postedCommentSection__textDiv {
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 768px) and (min-width: 1280px) {
+  .postedCommentSection__textDiv {
+    margin-right: 24px;
+  }
+}
+.postedCommentSection__textDiv--text {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}/*# sourceMappingURL=CommentRendered.css.map */

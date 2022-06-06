@@ -1,0 +1,107 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mediaQueries' as *;
+
+.uploadVidDiv{
+    
+    @include tablet {
+        
+    }
+
+    @include desktop{
+        margin: 0 $desktop-margin;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__left{
+        margin: $mobile-margin;
+
+        &--para{
+            @include section-header($mercury-clr);
+        }
+
+        &--image{
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        @include tablet {
+            margin: 0;
+            margin: $tablet-margin;
+
+            &--image{
+                width: 50%;
+            }
+        }
+        @include desktop{
+            margin: 0;
+            width: 30%;
+
+            &--h2{
+                font-size: larger;
+                width: 100%;
+                border-bottom: $border;
+            }
+
+            &--image{
+                width: 100%;
+            }
+        }       
+    }
+
+    &__right {
+        margin: $mobile-margin;
+       
+        &--label {
+            @include section-header($mercury-clr);
+        }
+
+        &--input {
+            width: 100%;
+        }
+
+        &--pubButton{
+            @include buttons;
+            background: url('../../assets/icons/publish.svg') no-repeat 4%;
+            background-color: $blue-clr;
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        &--cancelButton{
+            @include buttons;
+            width: 100%;
+            background-color: white;
+            color: $blue-clr;
+            margin-top: 16px;
+        }
+
+        @include tablet {
+            margin: $tablet-margin;
+
+            &--uploadVidDiv__rightTablet{
+                display: flex;
+               
+            }
+            &--pubButton{
+                max-width: 30%;
+            }
+
+            &--cancelButton{
+                max-width: 30%;
+            }
+        }
+        @include desktop{
+            margin: 0;
+            padding-top: 72px;
+            
+            &--pubButton{
+                max-width: 40%;
+            }
+            &--cancelButton{
+                max-width: 40%;
+            }
+        }     
+
+    }
+}

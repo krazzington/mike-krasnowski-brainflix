@@ -1,0 +1,23 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mediaQueries' as *;
+
+.desktop {
+    
+
+    @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+    margin: 0 $desktop-margin;
+
+        &__left {
+            max-width: 60%;
+            border-right: $border;
+        }
+
+        &__right {
+
+        }
+    }
+}

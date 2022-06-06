@@ -2,17 +2,16 @@ import './CreateComment.scss';
 import add from '../../assets/icons/add_comment.svg';
 import Mohan from '../../assets/images/Mohan-muruge.jpg';
 import React from 'react';
-import videoDetails from '../../data/video-details.json';
+
 
 function CommentBox(props) {
 
     const videoVariable = props.data;
-    const videoData = videoDetails.find(video => video.id === videoVariable);
+
     return (
-        <div className="commentBoxDiv desktop desktop__left">
-            <div className="desktop__left">
+        <div className="commentBoxDiv">
             <div className="commentBoxDiv__numberOfComments">
-                <p className="commentBoxDiv__commentAmount">{videoData.comments.length} Comments</p>
+                <p className="commentBoxDiv__commentAmount">{videoVariable.comments !== undefined ? videoVariable.comments.length : ""} Comments</p>
             </div>
             <div  className="commentBoxDiv__commentMainDiv">
                 <div className="commentMainDiv__commentSectionImageDiv">
@@ -22,7 +21,6 @@ function CommentBox(props) {
                     <p className="commentMainDiv__commentSectionForm--header">join the conversation</p>    
                         <CommentForm  />
                 </div>
-            </div>
             </div>
         </div>
     )

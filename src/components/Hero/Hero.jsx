@@ -5,15 +5,16 @@ import play from '../../assets/icons/play.svg';
 import volume from '../../assets/icons/volume_up.svg';
 import fullscreen from '../../assets/icons/fullscreen.svg';
 
+
 function Hero(props) {
 
     const videoVariable = props.data;
-    const videoData = videoDetails.find(video => video.id === videoVariable);
+    
     return (
         <>
         <main className="main">
             <div className="video">
-            <video className="video__player" width="100%" src={videoData.video} poster={videoData.image}>
+            <video className="video__player" width="100%" src={videoVariable.video} poster={videoVariable.image}>
             </video>
             <div className='controlsDiv'>
                 <div className='controlsDiv__playDiv'>
@@ -21,7 +22,7 @@ function Hero(props) {
                 </div>
                 <div className='controlsDiv__scrollDiv'>
                     <div className='controlsDiv__scrollDiv--scroll'></div>
-                    <p className='controlsDiv__scrollDiv--time'>0:00 / 4:01</p>
+                    <p className='controlsDiv__scrollDiv--time'>0:00 / {videoVariable.duration}</p>
                 </div>
                 <div className='controlsDiv__fscreenVol'>
                         <img className='controlsDiv__fscreenVol--fullscreen' src={fullscreen} alt='fullscreen button'/>
@@ -29,6 +30,8 @@ function Hero(props) {
                     </div>
             </div>
             </div>
+            
+
         </main>
         </>
     )

@@ -1,21 +1,20 @@
 import './NextVideo.scss';
-import videosList from '../../data/videos.json';
+import { Link } from 'react-router-dom';
 
 const NextVideo = (props) => {
     
-    const clickHandler = (id) => {
-        props.videoData(id);
-    }
-    const nextVideoFilter = videosList.filter(videos => videos.id !== props.data);
-    const newNextVideo = nextVideoFilter.map((nextVideos, index) => {
+    const videoVariable = props.data;
+    const newNextVideo = videoVariable.filter(videos => videos.id !== props.videoId).map((nextVideos, index) => {
         return (
-            <div key={index} onClick={() => clickHandler(nextVideos.id)} className='nextVidSectionDiv'>
-                <img className='nextVidSectionDiv__videoImage' src={nextVideos.image} alt=''></img>
-                <div className='nextVidSectionDiv__titleChannelDiv'>
-                    <p className='nextVidSectionDiv__titleChannelDiv--videoTitle'>{nextVideos.title}</p>
-                    <p className='nextVidSectionDiv__titleChannelDiv--videoChannel'>{nextVideos.channel}</p>
+            <Link to={`/videos/${nextVideos.id}`}>
+                <div key={index} className='nextVidSectionDiv'>
+                    <img className='nextVidSectionDiv__videoImage' src={nextVideos.image} alt=''></img>
+                    <div className='nextVidSectionDiv__titleChannelDiv'>
+                        <p className='nextVidSectionDiv__titleChannelDiv--videoTitle'>{nextVideos.title}</p>
+                        <p className='nextVidSectionDiv__titleChannelDiv--videoChannel'>{nextVideos.channel}</p>
+                    </div>
                 </div>
-            </div>      
+            </Link>
         )
     }
     )
@@ -29,4 +28,4 @@ const NextVideo = (props) => {
     )
 }
 
-export default NextVideo
+export default NextVideo;

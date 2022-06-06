@@ -6,6 +6,10 @@
 .nextVidSection {
     margin: $mobile-margin;
     
+    @include tablet{
+        margin-left: $tablet-margin;
+    }
+
     &__nextVidSectionHeader{
         @include section-header($silver-clr);
     }
@@ -30,7 +34,6 @@
         border-radius: 4px;
         background-color: $mercury-clr;
         flex: 1 5%;
-        
     }
         
     &__titleChannelDiv {
