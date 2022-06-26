@@ -45,6 +45,11 @@ class Upload extends React.Component {
         this.uploadVideo(e, title, description)
     }
 
+    handleClick = (e) => {
+        this.props.history.push('/');
+        alert('Success!')
+    }
+
         render(){
             return (
                 <>
@@ -61,7 +66,7 @@ class Upload extends React.Component {
                             <input className='uploadVidDiv__right--input' name="title" placeholder='Add a title to your video' type="text"></input>
                             <label className='uploadVidDiv__right--label'>add a video description</label><br />
                             <input className='uploadVidDiv__right--input' name="description" placeholder='Add a description to your video' type="textarea"></input>
-                            <button className='uploadVidDiv__rightTablet uploadVidDiv__right--pubButton'>PUBLISH</button>
+                            <button className='uploadVidDiv__rightTablet uploadVidDiv__right--pubButton' onClick={this.handleClick}>PUBLISH</button>
                             <button className='uploadVidDiv__rightTablet uploadVidDiv__right--cancelButton'>CANCEL</button>
                         </form>
                     </div>
