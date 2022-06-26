@@ -71,19 +71,4 @@ class Upload extends React.Component {
         }
     }
 
-
-// apiAddVideoDetails = (e, title, description) => {
-//     e.preventDefault();
-
-//     //fs.write - json needs to be put on  file on a disk - each time modifying data store
-//     axios({
-//         url: videosBackEnd,
-//         method: 'POST',
-//         data: { title, description, image:"http://localhost:8080/image/image0.jpeg" },
-//         headers: { 'Content-Type': 'application/json' }
-//       }).then((response) => {
-//         this.setState({ students: response.data });
-//       });
-// };
-
 export default Upload;
