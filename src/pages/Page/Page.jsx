@@ -8,12 +8,7 @@ import React from 'react';
 import Description from '../../components/Description/Description';
 import axios from 'axios';
 
-// const videosAPI = "https://project-2-api.herokuapp.com/videos";
-// const APIKey = "?api_key=767ab1ec-0aae-47d0-8c0b-e0bd8672ce94";
 const videosBackEnd = "http://localhost:8080/videos";
-
-// const APIConcat = videosAPI + APIKey;
-
 
 class Page extends React.Component {
 
@@ -66,7 +61,7 @@ class Page extends React.Component {
     }
 
     render(){
-        if (this.state.videoDetails) {//(Object.keys(this.state.videoDetails).length > 0){
+        if (this.state.videoDetails) {
         return (
             <>
                 <Header />
