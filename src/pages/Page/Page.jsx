@@ -22,8 +22,7 @@ class Page extends React.Component {
 
     apiCallNextVideos = () => {
         axios.get(videosBackEnd)
-        .then((response)=>{
-        console.log(response.data)    
+        .then((response)=>{  
             if(response.data){
                 this.setState({
                     nextVideos: response.data
