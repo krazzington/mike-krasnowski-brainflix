@@ -1,5 +1,4 @@
 import './Hero.scss';
-import videoDetails from '../../data/video-details.json';
 import play from '../../assets/icons/play.svg';
 //import scrub from '../../assets/icons/scrub.svg';
 import volume from '../../assets/icons/volume_up.svg';
